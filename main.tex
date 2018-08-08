@@ -1,0 +1,113 @@
+\documentclass[12pt, a4paper, roman, twoside]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+%
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                              % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+%
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+%
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+%
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist 
+%
+% personal data
+\name{Denis}{Jacob Machado}
+\title{References}                               % optional, remove / comment the line if not wanted
+\address{Av. Otacilio Tomanick 586}{CEP 05363-000, São Paulo--SP, Brazil}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+55~(11)~98946~3314}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{+55~(11)~3091~7615}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+\email{denisjacobmachado@gmail.com}                               % optional, remove / comment the line if not wanted
+\homepage{https://about.me/machadodj}                         % optional, remove / comment the line if not wanted
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+% \photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%
+% formatação básica de cabeçalhos e rodapés
+\usepackage{fancyhdr} % Usar os estilos do pacote fancyhdr
+    \pagestyle{fancy} % Páginas estilo fancy
+    \fancypagestyle{plain}{\fancyhf{}}
+    \renewcommand{\headrulewidth}{0pt} % Sem linha no cabeçalho
+    \headheight 13pt % Altura do cabeçalho
+    \footskip 30pt
+    \renewcommand{\footrulewidth}{0pt} % Sem linha no rodapé
+    \newcommand{\helv}{
+        %\sffamily
+        \fontsize{9}{11}\selectfont} % Comando para alterar fonte de cabeçalhos e rodapés
+    % cor do texto em cabeçalhos e rodapés
+    \usepackage{xcolor}
+    \usepackage{etoolbox}
+    \makeatletter
+    \patchcmd{\@fancyhead}{\rlap}{\color{lightgray}\rlap}{}{}
+    \patchcmd{\headrule}{\hrule}{\color{lightgray}\hrule}{}{}
+    \patchcmd{\@fancyfoot}{\rlap}{\color{lightgray}\rlap}{}{}
+    \patchcmd{\footrule}{\hrule}{\color{lightgray}\hrule}{}{}
+    \makeatother
+    \fancyfoot[LE]{\nouppercase{\helv\small{\thepage}}} % Rodapé na esquerda nas paginas pares
+    \fancyhead[LE]{\nouppercase{\helv\small{Machado, DJ}}} % Cabeçalho na esquerda nas páginas pares
+    \fancyfoot[RO]{\nouppercase{\helv\small{\thepage}}} % Rodapé na direita nas páginas ímpares
+    \fancyhead[RO]{\nouppercase{\helv\small{Machado, DJ}}} % Cabeçalho na direita nas páginas ímpares
+    \nopagenumbers{} % uncomment to suppress automatic style numbering
+%
+\begin{document}\thispagestyle{empty} % Remove cabeçalho e rodapé da primeira página
+%
+\recipient{Application for Postdoctoral Fellow}{Edital PNPD/ Capes\\Interunidades em Bioinformática}
+\date{Augiust 8, 2018}
+\opening{Dear Sir or Madam,}
+\closing{Yours faithfully,}
+\makelettertitle
+%
+I would like to provide the following information for references to be attached to my application.
+%
+\section{Professor Taran Grant, Ph.D.}
+    {\begin{changemargin}{0.5cm}{0.5cm}{\small
+    Professor at the Institute of Biosciences (IB) of the University of São Paulo (USP) and curator at the Museum of Zoology of the Universitty of São Paulo (MZUSP).\\
+    Homepage: \url{http://www.ib.usp.br/grant/anfibios}.\\
+    Email: \href{mailto:taran.grant@ib.usp.br}{taran.grant@ib.usp.br}.\\
+    Phone number: +55~(11)~3091~7615.\\
+    }\end{changemargin}}
+%
+\section{Professor Fernando Portella de Luna Marques, Ph.D.}
+    {\begin{changemargin}{0.5cm}{0.5cm}{\small
+    Professor at the IBUSP and curator at the MZUSP.\\
+    Homepage: \url{http://www.ib.usp.br/~fernando}.\\
+    Email: \href{mailto:fernando@ib.usp.br}{fernando@ib.usp.br}.\\
+    Phone number: +55~(11)~3091~7481.\\
+    }\end{changemargin}}
+%
+\section{Professor Daniel José Galafasse Lahr, Ph.D.}
+    {\begin{changemargin}{0.5cm}{0.5cm}{\small
+    Professor at the IBUSP.\\
+    Homepage: \url{http://www.ib.usp.br/zoologia/lahr}.\\
+    Email: \href{mailto:dlahr@ib.usp.br}{dlahr@ib.usp.br}.\\
+    Phone number: +55~(11)~3091~0948.\\
+    }\end{changemargin}}
+%
+\section{Professor Daniel Janies, Ph.D.}
+    {\begin{changemargin}{0.5cm}{0.5cm}{\small
+    Professor at University of North Carolina at Charlotte (UNCC).\\
+    Email: \href{mailto:djanies@uncc.edu}{djanies@uncc.edu}.\\
+    Phone number: +1~704~687~1742.\\
+    }\end{changemargin}}
+%
+Thank you very much for your attention.\\
+%
+\makeletterclosing
+%
+\end{document}
